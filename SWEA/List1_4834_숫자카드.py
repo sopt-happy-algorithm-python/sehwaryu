@@ -10,15 +10,20 @@
 # 각 줄마다 "#T" (T는 테스트 케이스 번호)를 출력한 뒤, 가장 많은 카드의 숫자와 장 수를 차례로 출력한다.
 
 T = int(input())
-for i in range(T):
-    N = int(input())
-    for j in range(N):
-        lst = list(map(int,input().split()))
-        arr = []
-        count = 0
-        arr.append(lst[j])
-        for a in range(arr):
-            if lst[j] == arr[a]:
-                count += 1
-        print(count)
+for i in range(1, T+1):
+    num = int(input())
+    N = str(input())
+    cnt = []
+    for j in range(10):
+        cnt.append(0)
+
+    for i in range(num):
+        cnt[int(N[i])] += 1
+
+    max = -1
+    for i in range(10):
+        if cnt[i] >= max:
+            ans = i
+            max = cnt[i]
+    print("#%d %d %d" %(j, ans, cnt[ans]))
                 
