@@ -44,7 +44,7 @@ for l in range(1, length+1):
     index = 0
     maxnum = 0
     #반복문
-    for i in range(9, -1, -1):
+    for i in range(9, 0, -1):
         if numcheck[i] > maxnum :
             maxnum = numcheck[i]
             index = i
